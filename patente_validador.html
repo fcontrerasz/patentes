@@ -1,0 +1,167 @@
+<html>
+<script>
+	var oldTableSeries = [];
+	var newTableSeries = [];
+
+	oldTableSeries = [{serie:"",digit:""},{serie:"AA",digit:1},{serie:"BA",digit:2},{serie:"CA",digit:3},{serie:"EA",digit:4},{serie:"FA",digit:5},{serie:"GA",digit:6},{serie:"HA",digit:7},{serie:"AB",digit:8},{serie:"CB",digit:9},{serie:"EB",digit:10},{serie:"FB",digit:11},{serie:"GB",digit:12},{serie:"HB",digit:13},{serie:"AC",digit:14},{serie:"BC",digit:15},{serie:"EC",digit:16},{serie:"FC",digit:17},{serie:"GC",digit:18},{serie:"HC",digit:19},{serie:"BD",digit:20},{serie:"ED",digit:21},{serie:"FD",digit:22},{serie:"GD",digit:23},{serie:"HD",digit:24},{serie:"AE",digit:25},{serie:"BE",digit:26},{serie:"CE",digit:27},{serie:"EE",digit:28},{serie:"FE",digit:29},{serie:"GE",digit:30},{serie:"HE",digit:31},{serie:"AF",digit:32},{serie:"BF",digit:33},{serie:"CF",digit:34},{serie:"EF",digit:35},{serie:"FF",digit:36},{serie:"GF",digit:37},{serie:"HF",digit:38},{serie:"AG",digit:39},{serie:"BG",digit:40},{serie:"CG",digit:41},{serie:"EG",digit:42},{serie:"FG",digit:43},{serie:"HG",digit:44},{serie:"AH",digit:45},{serie:"BH",digit:46},{serie:"CH",digit:47},{serie:"EH",digit:48},{serie:"FH",digit:49},{serie:"GH",digit:50},{serie:"HH",digit:51},{serie:"AJ",digit:52},{serie:"BJ",digit:53},{serie:"CJ",digit:54},{serie:"EJ",digit:55},{serie:"FJ",digit:56},{serie:"GJ",digit:57},{serie:"HJ",digit:58},{serie:"BK",digit:59},{serie:"CK",digit:60},{serie:"EK",digit:61},{serie:"FK",digit:62},{serie:"GK",digit:63},{serie:"HK",digit:64},{serie:"AL",digit:65},{serie:"BL",digit:66},{serie:"CL",digit:67},{serie:"EL",digit:68},{serie:"FL",digit:69},{serie:"GL",digit:70},{serie:"HL",digit:71},{serie:"AN",digit:72},{serie:"BN",digit:73},{serie:"CN",digit:74},{serie:"EN",digit:75},{serie:"FN",digit:76},{serie:"GN",digit:77},{serie:"HN",digit:78},{serie:"AP",digit:79},{serie:"BP",digit:80},{serie:"CP",digit:81},{serie:"EP",digit:82},{serie:"FP",digit:83},{serie:"GP",digit:84},{serie:"HP",digit:85},{serie:"AR",digit:86},{serie:"BR",digit:87},{serie:"CR",digit:88},{serie:"ER",digit:89},{serie:"FR",digit:90},{serie:"GR",digit:91},{serie:"HR",digit:92},{serie:"AS",digit:93},{serie:"BS",digit:94},{serie:"CS",digit:95},{serie:"ES",digit:96},{serie:"FS",digit:97},{serie:"GS",digit:98},{serie:"HS",digit:99},{serie:"AT",digit:100},{serie:"BT",digit:101},{serie:"CT",digit:102},{serie:"ET",digit:103},{serie:"FT",digit:104},{serie:"GT",digit:105},{serie:"HT",digit:106},{serie:"AU",digit:107},{serie:"BU",digit:108},{serie:"CU",digit:109},{serie:"EU",digit:110},{serie:"FU",digit:111},{serie:"GU",digit:112},{serie:"HU",digit:113},{serie:"AV",digit:114},{serie:"BV",digit:115},{serie:"CV",digit:116},{serie:"EV",digit:117},{serie:"FV",digit:118},{serie:"GV",digit:119},{serie:"HV",digit:120},{serie:"AX",digit:121},{serie:"BX",digit:122},{serie:"CX",digit:123},{serie:"EX",digit:124},{serie:"FX",digit:125},{serie:"GX",digit:126},{serie:"HX",digit:127},{serie:"BY",digit:128},{serie:"CY",digit:129},{serie:"EY",digit:130},{serie:"FY",digit:131},{serie:"GY",digit:132},{serie:"HY",digit:133},{serie:"AZ",digit:134},{serie:"BZ",digit:135},{serie:"CZ",digit:136},{serie:"EZ",digit:137},{serie:"FZ",digit:138},{serie:"GZ",digit:139},{serie:"DA",digit:140},{serie:"DB",digit:141},{serie:"DD",digit:142},{serie:"DE",digit:143},{serie:"DF",digit:144},{serie:"DG",digit:145},{serie:"DH",digit:146},{serie:"DI",digit:147},{serie:"DJ",digit:148},{serie:"DK",digit:149},{serie:"DL",digit:150},{serie:"DN",digit:151},{serie:"DP",digit:152},{serie:"DR",digit:153},{serie:"DS",digit:154},{serie:"DT",digit:155},{serie:"DU",digit:156},{serie:"DV",digit:157},{serie:"DX",digit:158},{serie:"DY",digit:159},{serie:"DZ",digit:160},{serie:"KA",digit:161},{serie:"KB",digit:162},{serie:"KC",digit:163},{serie:"KD",digit:164},{serie:"KE",digit:165},{serie:"KF",digit:166},{serie:"KG",digit:167},{serie:"KH",digit:168},{serie:"KJ",digit:169},{serie:"KK",digit:170},{serie:"KL",digit:171},{serie:"KN",digit:172},{serie:"KP",digit:173},{serie:"KR",digit:174},{serie:"KS",digit:175},{serie:"KT",digit:176},{serie:"KU",digit:177},{serie:"KV",digit:178},{serie:"KX",digit:179},{serie:"KY",digit:180},{serie:"KZ",digit:181},{serie:"LA",digit:182},{serie:"LB",digit:183},{serie:"LC",digit:184},{serie:"LD",digit:185},{serie:"LE",digit:186},{serie:"LF",digit:187},{serie:"LG",digit:188},{serie:"LH",digit:189},{serie:"LJ",digit:190},{serie:"LK",digit:191},{serie:"LL",digit:192},{serie:"LN",digit:193},{serie:"LP",digit:194},{serie:"LR",digit:195},{serie:"LS",digit:196},{serie:"LT",digit:197},{serie:"LU",digit:198},{serie:"LV",digit:199},{serie:"LX",digit:200},{serie:"LY",digit:201},{serie:"LZ",digit:202},{serie:"NA",digit:203},{serie:"NB",digit:204},{serie:"NC",digit:205},{serie:"ND",digit:206},{serie:"NE",digit:207},{serie:"NF",digit:208},{serie:"NG",digit:209},{serie:"NH",digit:210},{serie:"NJ",digit:211},{serie:"NK",digit:212},{serie:"NL",digit:213},{serie:"NN",digit:214},{serie:"NP",digit:215},{serie:"NR",digit:216},{serie:"NS",digit:217},{serie:"NT",digit:218},{serie:"NU",digit:219},{serie:"NV",digit:220},{serie:"NY",digit:221},{serie:"NZ",digit:222},{serie:"PA",digit:223},{serie:"PB",digit:224},{serie:"PC",digit:225},{serie:"PD",digit:226},{serie:"PE",digit:227},{serie:"PF",digit:228},{serie:"PG",digit:229},{serie:"PH",digit:230},{serie:"PJ",digit:231},{serie:"PK",digit:232},{serie:"PL",digit:233},{serie:"PN",digit:234},{serie:"PP",digit:235},{serie:"PS",digit:236},{serie:"PT",digit:237},{serie:"PU",digit:238},{serie:"PV",digit:239},{serie:"PX",digit:240},{serie:"PY",digit:241},{serie:"PZ",digit:242},{serie:"NX",digit:243},{serie:"RA",digit:244},{serie:"RB",digit:245},{serie:"RC",digit:246},{serie:"RD",digit:247},{serie:"RE",digit:248},{serie:"RF",digit:249},{serie:"RG",digit:250},{serie:"RH",digit:251},{serie:"RJ",digit:252},{serie:"RK",digit:253},{serie:"RL",digit:254},{serie:"RN",digit:255},{serie:"RP",digit:256},{serie:"RR",digit:257},{serie:"RS",digit:258},{serie:"RT",digit:259},{serie:"RU",digit:260},{serie:"RV",digit:261},{serie:"RX",digit:262},{serie:"RY",digit:263},{serie:"RZ",digit:264},{serie:"HZ",digit:265},{serie:"SA",digit:266},{serie:"SB",digit:267},{serie:"SC",digit:268},{serie:"SD",digit:269},{serie:"SE",digit:270},{serie:"SF",digit:271},{serie:"SG",digit:272},{serie:"SH",digit:273},{serie:"SJ",digit:274},{serie:"SK",digit:275},{serie:"SL",digit:276},{serie:"SN",digit:277},{serie:"SP",digit:278},{serie:"SR",digit:279},{serie:"SS",digit:280},{serie:"ST",digit:281},{serie:"SU",digit:282},{serie:"SV",digit:283},{serie:"SX",digit:284},{serie:"SY",digit:285},{serie:"SZ",digit:286},{serie:"TA",digit:287},{serie:"TB",digit:288},{serie:"TC",digit:289},{serie:"TD",digit:290},{serie:"TE",digit:291},{serie:"TF",digit:292},{serie:"TG",digit:293},{serie:"TH",digit:294},{serie:"TJ",digit:295},{serie:"TK",digit:296},{serie:"TL",digit:297},{serie:"TN",digit:298},{serie:"TP",digit:299},{serie:"TR",digit:300},{serie:"TS",digit:301},{serie:"TT",digit:302},{serie:"TU",digit:303},{serie:"TV",digit:304},{serie:"TX",digit:305},{serie:"TY",digit:306},{serie:"TZ",digit:307},{serie:"UA",digit:308},{serie:"UB",digit:309},{serie:"UC",digit:310},{serie:"UD",digit:311},{serie:"UE",digit:312},{serie:"UF",digit:313},{serie:"UG",digit:314},{serie:"UH",digit:315},{serie:"UJ",digit:316},{serie:"UK",digit:317},{serie:"UL",digit:318},{serie:"UN",digit:319},{serie:"UP",digit:320},{serie:"UR",digit:321},{serie:"US",digit:322},{serie:"UT",digit:323},{serie:"UU",digit:324},{serie:"UV",digit:325},{serie:"UX",digit:326},{serie:"UY",digit:327},{serie:"UZ",digit:328},{serie:"VA",digit:329},{serie:"VB",digit:330},{serie:"VC",digit:331},{serie:"VD",digit:332},{serie:"VE",digit:333},{serie:"VF",digit:334},{serie:"VG",digit:335},{serie:"VH",digit:336},{serie:"VJ",digit:337},{serie:"VK",digit:338},{serie:"VL",digit:339},{serie:"VN",digit:340},{serie:"VP",digit:341},{serie:"VR",digit:342},{serie:"VS",digit:343},{serie:"VT",digit:344},{serie:"VU",digit:345},{serie:"VV",digit:346},{serie:"VX",digit:347},{serie:"VY",digit:348},{serie:"VZ",digit:349},{serie:"XA",digit:350},{serie:"XB",digit:351},{serie:"XC",digit:352},{serie:"XD",digit:353},{serie:"XE",digit:354},{serie:"XF",digit:355},{serie:"XG",digit:356},{serie:"XH",digit:357},{serie:"XJ",digit:358},{serie:"XK",digit:359},{serie:"XL",digit:360},{serie:"XM",digit:361},{serie:"XN",digit:362},{serie:"XP",digit:363},{serie:"XQ",digit:364},{serie:"XR",digit:365},{serie:"XS",digit:366},{serie:"XT",digit:367},{serie:"XU",digit:368},{serie:"XV",digit:369},{serie:"XX",digit:370},{serie:"XY",digit:371},{serie:"XZ",digit:372},{serie:"YA",digit:373},{serie:"YB",digit:374},{serie:"JA",digit:375},{serie:"JB",digit:376},{serie:"JC",digit:377},{serie:"JD",digit:378},{serie:"JE",digit:379},{serie:"YC",digit:380},{serie:"YD",digit:381},{serie:"YE",digit:382},{serie:"YF",digit:383},{serie:"YG",digit:384},{serie:"YH",digit:385},{serie:"YJ",digit:386},{serie:"YK",digit:387},{serie:"YL",digit:388},{serie:"YN",digit:389},{serie:"YP",digit:390},{serie:"YR",digit:391},{serie:"YS",digit:392},{serie:"YT",digit:393},{serie:"YU",digit:394},{serie:"YV",digit:395},{serie:"YX",digit:396},{serie:"YY",digit:397},{serie:"YZ",digit:398},{serie:"ZA",digit:399},{serie:"ZB",digit:400},{serie:"ZC",digit:401},{serie:"ZD",digit:402},{serie:"ZE",digit:403},{serie:"ZF",digit:404},{serie:"ZG",digit:405},{serie:"ZH",digit:406},{serie:"ZI",digit:407},{serie:"ZJ",digit:408},{serie:"ZK",digit:409},{serie:"ZL",digit:410},{serie:"JF",digit:411},{serie:"JG",digit:412},{serie:"JH",digit:413},{serie:"ZN",digit:414},{serie:"ZP",digit:415},{serie:"ZR",digit:416},{serie:"ZS",digit:417},{serie:"ZT",digit:418},{serie:"ZU",digit:419},{serie:"ZV",digit:420},{serie:"ZX",digit:421},{serie:"ZY",digit:422},{serie:"ZZ",digit:423},{serie:"JL",digit:424},{serie:"JN",digit:425},{serie:"JO",digit:426},{serie:"JP",digit:427},{serie:"JR",digit:428},{serie:"JS",digit:429},{serie:"WA",digit:430},{serie:"WB",digit:431},{serie:"WC",digit:432},{serie:"WD",digit:433},{serie:"WE",digit:434},{serie:"WF",digit:435},{serie:"WG",digit:436},{serie:"WH",digit:437},{serie:"WJ",digit:438},{serie:"WK",digit:439},{serie:"WL",digit:440},{serie:"WN",digit:441},{serie:"WP",digit:442},{serie:"WR",digit:443},{serie:"WS",digit:444},{serie:"WT",digit:445},{serie:"WU",digit:446},{serie:"JJ",digit:447},{serie:"JK",digit:448},{serie:"WV",digit:449},{serie:"WW",digit:450},{serie:"WX",digit:451},{serie:"WY",digit:452},{serie:"WZ",digit:453},{serie:"ZW",digit:454},{serie:"YW",digit:455},{serie:"XW",digit:456},{serie:"UW",digit:457},{serie:"TW",digit:458},{serie:"SW",digit:459},{serie:"RW",digit:460},{serie:"PW",digit:461},{serie:"NW",digit:462},{serie:"LW",digit:463},{serie:"KW",digit:464},{serie:"MZ",digit:465},{serie:"MY",digit:466},{serie:"MX",digit:467},{serie:"MV",digit:468},{serie:"MU",digit:469},{serie:"MT",digit:470},{serie:"MS",digit:471},{serie:"JT",digit:472},{serie:"JU",digit:473},{serie:"JV",digit:474},{serie:"JW",digit:475},{serie:"JX",digit:476},{serie:"JY",digit:477},{serie:"JZ",digit:478},{serie:"MA",digit:479},{serie:"MB",digit:480},{serie:"MC",digit:481},{serie:"MD",digit:482},{serie:"ME",digit:483},{serie:"MF",digit:484},{serie:"MG",digit:485},{serie:"MH",digit:486},{serie:"MJ",digit:487},{serie:"MK",digit:488},{serie:"ML",digit:489},{serie:"MN",digit:490},{serie:"MP",digit:491},{serie:"MR",digit:492},{serie:"IA",digit:493},{serie:"IB",digit:494},{serie:"IC",digit:495},{serie:"ID",digit:496},{serie:"IE",digit:497},{serie:"IF",digit:498},{serie:"IG",digit:499},{serie:"IH",digit:500},{serie:"IJ",digit:501},{serie:"IK",digit:502},{serie:"IL",digit:503},{serie:"IN",digit:504},{serie:"IO",digit:505},{serie:"IP",digit:506},{serie:"IR",digit:507},{serie:"IS",digit:508},{serie:"IT",digit:509},{serie:"IU",digit:510},{serie:"IV",digit:511},{serie:"IW",digit:512},{serie:"IX",digit:513},{serie:"IY",digit:514},{serie:"IZ",digit:515},{serie:"QA",digit:516},{serie:"QB",digit:517},{serie:"QC",digit:518},{serie:"QD",digit:519},{serie:"QE",digit:520},{serie:"QF",digit:521},{serie:"QG",digit:522},{serie:"QH",digit:523},{serie:"QJ",digit:524},{serie:"QK",digit:525},{serie:"QL",digit:526},{serie:"QN",digit:527},{serie:"QO",digit:528},{serie:"QP",digit:529},{serie:"QR",digit:530},{serie:"QS",digit:531},{serie:"QT",digit:532},{serie:"QU",digit:533},{serie:"QV",digit:534},{serie:"QW",digit:535},{serie:"QX",digit:536},{serie:"QY",digit:537},{serie:"QZ",digit:538},{serie:"OA",digit:539},{serie:"OB",digit:540},{serie:"OC",digit:541},{serie:"OD",digit:542},{serie:"OE",digit:543},{serie:"OF",digit:544},{serie:"OG",digit:545},{serie:"OH",digit:546},{serie:"OJ",digit:547},{serie:"OK",digit:548},{serie:"OL",digit:549},{serie:"ON",digit:550},{serie:"OO",digit:551},{serie:"OP",digit:552},{serie:"OR",digit:553},{serie:"OS",digit:554},{serie:"OT",digit:555},{serie:"OU",digit:556},{serie:"OV",digit:557},{serie:"OW",digit:558},{serie:"OX",digit:559},{serie:"OY",digit:560},{serie:"OZ",digit:561},{serie:"AD",digit:562},{serie:"AI",digit:563},{serie:"AK",digit:564},{serie:"AM",digit:565},{serie:"AW",digit:566},{serie:"AY",digit:567},{serie:"BB",digit:568},{serie:"BI",digit:569},{serie:"BM",digit:570},{serie:"BO",digit:571},{serie:"BW",digit:572},{serie:"CC",digit:573},{serie:"CD",digit:574},{serie:"CI",digit:575},{serie:"CM",digit:576},{serie:"CO",digit:577},{serie:"CW",digit:578},{serie:"DC",digit:579},{serie:"DM",digit:580},{serie:"DO",digit:581},{serie:"DW",digit:582}];
+
+		newTableSeries = [{serie:"",digit:""},{serie:"B",digit:1},{serie:"C",digit:2},{serie:"D",digit:3},{serie:"F",digit:4},{serie:"G",digit:5},{serie:"H",digit:6},{serie:"J",digit:7},{serie:"K",digit:8},{serie:"L",digit:9},{serie:"P",digit:0},{serie:"R",digit:2},{serie:"S",digit:3},{serie:"T",digit:4},{serie:"V",digit:5},{serie:"W",digit:6},{serie:"X",digit:7},{serie:"Y",digit:8},{serie:"Z",digit:9}]
+
+	function tipode(type, string) {
+							var isType = type,
+								i;
+							string = string.replace(/\./g, '');
+
+							for (i = 0; i < string.length; i++) {
+
+								if (isFinite(string.charAt(i)) && !isNaN(string.charAt(i))) {
+									isType = 'number';
+									if (type != isType) {
+										return false
+									}
+								} else {
+									isType = 'string';
+									if (type != isType) {
+										return false
+									}
+								}
+
+							};
+
+							if (isType == type) {
+								return true;
+							} else {
+								return false;
+							}
+	}
+
+	function getDV(patente) {
+							return validar(patente, '', true);
+	}
+	function calcDV(plateSerie) {
+
+							var inc = 0,
+								x2 = 2,
+								i;
+
+							for (i = plateSerie.length - 1; i >= 0; i--) {
+								inc += parseInt(plateSerie.charAt(i), 10) * x2;
+								x2++;
+								if (x2 > 7)
+									x2 = 2;
+							}
+
+							var result = 11 - inc % 11;
+
+							if (result == 11) {
+								result = 0;
+							} else if (result == 10) {
+								result = 'K';
+							}
+							return result;
+	}
+	function validar(patente, dv, getDV) {
+							if (dv)
+								var dv = dv.toUpperCase();
+							if (patente.length == 5 || patente.length == 6) {
+
+								var patente = new String(patente).toUpperCase();
+								var numDigit = 0;
+
+								var serie = patente.substring(0, 2);
+								var nums;
+
+								if (patente.length == 5) { 
+								    console.log("5 caracteres");
+									if (tipode('string', patente.substring(0, 2)) && tipode('number', patente.substring(2, 5))) {
+										nums = 0 + patente.substring(2, 5);
+									}
+								} else { // 6 caracteres
+									console.log("6 caracteres");
+									nums = patente.substring(2, 6);
+								}
+
+								if (tipode('string', patente.substring(0, 2)) && tipode('number', patente.substring(2, 6))) { 
+									console.log("patente antigua y motos");// 
+									var table = oldTableSeries,
+										iTable;
+
+									for (iTable in table) {
+										if (table[iTable].serie == serie) {
+											numDigit = table[iTable].digit + nums;
+										}
+									}
+
+								} else if (tipode('string', patente.substring(0, 4)) && tipode('number', patente.substring(4, 6))) { // patente nueva
+									console.log("patente nueva");// 
+
+									var numDigit = '',
+										serie = patente.substring(0, 4),
+										nums = patente.substring(4, 6),
+										table = newTableSeries,
+										inc = 0,
+										iSerie;
+
+									if (nums.length < 2){
+										console.log("pocos numeros");
+										return false;
+									}
+
+									//alert(newTableSeries.length);
+
+									for (iSerie in serie.split('')) {
+
+										for (iTable in table) {
+											console.log(table[iTable].serie);
+											if (table[iTable].serie == serie.substr(iSerie, 1)) {
+												//alert(table[iTable].digit);
+												numDigit = numDigit + table[iTable].digit;
+												inc++;
+												break;
+											}
+										};
+									};
+
+									if (inc < 4) {
+										console.log("2");
+										return false;
+									}
+
+									numDigit = numDigit + nums;
+								} else if (tipode('string', patente.substring(0, 3)) && tipode('number', patente.substring(3, 6))) {
+									// patente carro de arrastre
+									console.log("patente carro arrastre");
+									return true;
+
+								} else {
+									console.log("error");
+									return false;
+								}
+
+								if (numDigit) {
+									var dvPatente = calcDV(numDigit);
+									if (dv) {
+										if (dv == dvPatente) {
+											return true;
+										} else {
+											return false;
+										}
+									} else if (getDV) {
+										return dvPatente;
+									} else {
+										return true;
+									}
+								} else {
+									return false;
+								}
+							} else {
+								return false;
+							}
+
+						}
+						var pat1 = "JFFB98";
+						var dv1 = getDV(pat1).toString();
+						//alert("DV es : "+dv1);
+						alert(validar(pat1, ""+dv1, false) );
+</script>
+</html>
